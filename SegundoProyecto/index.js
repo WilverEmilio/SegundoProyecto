@@ -4,7 +4,7 @@ const sequelize = require('./Config/database'); // Conexión a la base de datos
 const productRoutes = require('./Routes/productRoutes');
 
 const app = express();
-const port = 3000;
+const port = 8080;
 
 app.use(express.json());
 app.use('/api/products', productRoutes);
@@ -18,3 +18,4 @@ sequelize.sync()
         });
     })
     .catch(err => console.error('Unable to connect to the database:', err));
+
